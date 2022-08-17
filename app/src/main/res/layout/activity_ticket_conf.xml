@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TicketConfActivity">
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/nerg_logo" />
+
+    <TextView
+        android:id="@+id/heading_lbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Ticket Confirmation"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView2" />
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/ticket_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/heading_lbl"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            >
+
+            <TextView
+                android:id="@+id/ticket_no_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/origin_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toStartOf="@+id/dest_tv"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ticket_no_tv" />
+
+            <TextView
+                android:id="@+id/dest_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/origin_tv"
+                app:layout_constraintTop_toTopOf="@id/origin_tv" />
+
+            <TextView
+                android:id="@+id/dept_time_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toStartOf="@+id/arrival_time_tv"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/origin_tv" />
+
+            <TextView
+                android:id="@+id/arrival_time_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/dept_time_tv"
+                app:layout_constraintTop_toTopOf="@id/dept_time_tv" />
+            <TextView
+                android:id="@+id/personTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Booked By :"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toStartOf="@+id/person_tv"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/arrival_time_tv" />
+
+            <TextView
+                android:id="@+id/person_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/personTV"
+                app:layout_constraintTop_toTopOf="@id/personTV" />
+            <TextView
+                android:id="@+id/nopeopleTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No of Passengers :"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toStartOf="@+id/no_people_tv"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/person_tv" />
+
+            <TextView
+                android:id="@+id/no_people_tv"
+                android:layout_width="50dp"
+                android:layout_height="22dp"
+                android:text="TextView"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/nopeopleTV"
+                app:layout_constraintTop_toTopOf="@id/nopeopleTV" />
+            <TextView
+                android:id="@+id/verifiedTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="This is ticket is Valid"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/no_people_tv" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+    <TextView
+        android:id="@+id/loyal_lbl"
+        android:text="Bought with loyalty Card Please Scan to verify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ticket_card"
+        />
+    <Button
+        android:id="@+id/loyal_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Scan Loyalty Card"
+        android:layout_marginTop="8dp"
+        android:textAllCaps="false"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loyal_lbl" />
+    <Button
+        android:id="@+id/qr_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Goto Qr Scan"
+        android:layout_marginTop="8dp"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+    <Button
+        android:id="@+id/nav_con_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Goto Connections"
+        android:layout_marginTop="8dp"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/qr_btn" />
+</androidx.constraintlayout.widget.ConstraintLayout>
